@@ -1,6 +1,5 @@
-export(generateListTandP)
+export(generateListTandP,SpatialClustering)
 
-importFrom(spatstat,chclust)
 importFrom(spatstat,owin)
 importFrom(spatstat,ppp)
 importFrom(spatstat,ppm)
@@ -10,5 +9,5 @@ importFrom(cluster,clusGap)
 importFrom(cluster,maxSE)
 
 
-S3method(plot, GGInetwork)
+S3method(plot, SpatClust)
 
