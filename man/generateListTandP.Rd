@@ -19,6 +19,7 @@ An list with 3 objects \describe{
 	\item{Probabilities}{A list of n vector of size n-1 where each vector contains the sequence of interdistance probabilities.}
 	\item{start.points}{A vector of size n containing the starting point used for each trajectory.}
 }
+}
 \description{
 	\code{generateListTandP} allows the computation of the 1-dimensional trajectories and of the nearest-neighbour probabilities. Probabilities are computed based on a Poisson reference point process.
 	}

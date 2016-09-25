@@ -60,6 +60,6 @@ A. Bar-Hen, M. Emily and N. Picard. (2015) Spatial Cluster Detection Using Neare
 R. Tibshirani, G. Walther and T. Hastie (2001) Estimating the number of data clusters via the gap statistic. J. Roy. Stat. Soc. B 63, 411–423. \cr
 }
 \seealso{
-\code{\link{generateListTandP}}, \code{\link{getClusters}}, \code{\link{getMatDist}, \code{\link{SpatialClustering}}
+\code{\link{generateListTandP}}, \code{\link{getClusters}}, \code{\link{getMatDist}}, \code{\link{SpatialClustering}}
 }
 
