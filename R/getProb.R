@@ -1,19 +1,17 @@
-getProb <- function(data,window,w0,Homogeneous=TRUE,Z=NULL,intensity=NULL,myPPM=NULL,ngrid=100){
+getProb <- function(data,window,w0,Homogeneous=TRUE,Z=NULL,myPPM=NULL,ngrid=100){
 	wincur <- window[[1]]
 	n <- length(data$x)
 	if (Homogeneous){ ## processus homogene
-		if (is.null(intensity)){
-			intensity <- n/area.owin(w0)
-		}	
+		intensity <- n/spatstat::area.owin(w0)	
 	}
 	else {
 		if (is.null(myPPM)){
-			myPPP <- ppp(data$x,data$y,window=w0) ## Point process without covariate
+			myPPP <- spatstat::ppp(data$x,data$y,window=w0) ## Point process without covariate
 			if (is.null(Z)){break("Covariate is missing")}## Inhomogeneous Case - Covariate is needed for weighting intensity
 			else{
 				#xx <- seq(Z$xrange[1],Z$xrange[2],length=Z$dim[1]) ## x-Location of 
 				#yy <- seq(Z$yrange[1],Z$yrange[2],length=Z$dim[2]) ## x-Location of
-				myPPM <- ppm(myPPP, ~ Z, covariates=list(Z=Z)) ## Estimation of the point process with covariate
+				myPPM <- spatstat::ppm(myPPP, ~ Z, covariates=list(Z=Z)) ## Estimation of the point process with covariate
 			}
 		}
 	} 
@@ -29,7 +27,7 @@ getProb <- function(data,window,w0,Homogeneous=TRUE,Z=NULL,intensity=NULL,myPPM=
 		# Calculation of the mean intensity according to the covariate	
 		tmp.predict <- predict(myPPM,window=wincur,ngrid=ngrid)
 		lambdatmp <- mean(tmp.predict,na.rm=TRUE)
-		probObs[1] <- 1-exp(-lambdatmp*area.owin(wincur))
+		probObs[1] <- 1-exp(-lambdatmp*spatstat::area.owin(wincur))
 	}		
 	## Next probabilities
 	if (n > 2){
@@ -39,9 +37,9 @@ getProb <- function(data,window,w0,Homogeneous=TRUE,Z=NULL,intensity=NULL,myPPM=
 				## "Homogeneous"
 				tmp.win <- wincur
 				for (j in 1:(i-1)){
-					tmp.win <- setminus.owin(tmp.win,window[[j]])
+					tmp.win <- spatstat::setminus.owin(tmp.win,window[[j]])
 				} 
-				probObs[i] <- 1-exp(-intensity*(area.owin(tmp.win)))
+				probObs[i] <- 1-exp(-intensity*(spatstat::area.owin(tmp.win)))
 			}
 			else { 
 				## "Inhomogeneous"
@@ -53,7 +51,7 @@ getProb <- function(data,window,w0,Homogeneous=TRUE,Z=NULL,intensity=NULL,myPPM=
 				# Calculation of the mean intensity according to the covariate				
 				tmp.predict <- predict(myPPM,window=tmp.win,ngrid=ngrid)
 				lambdatmp <- mean(tmp.predict,na.rm=TRUE)
-				probObs[i] <- 1-exp(-lambdatmp*area.owin(tmp.win))
+				probObs[i] <- 1-exp(-lambdatmp*spatstat::area.owin(tmp.win))
 			}
 		}
 	}
