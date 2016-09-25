@@ -32,6 +32,7 @@ plot.SpatClust <- function(x,method=c("CH","Seg"),plot.dendro=TRUE,plot.covariat
 				}
 			}
 		} else {
+			par(mfrow=c(1,1))
 			if (plot.covariate){
 				plot(x$Z)
 				points(x$data,col=group,pch=19)
@@ -64,6 +65,7 @@ plot.SpatClust <- function(x,method=c("CH","Seg"),plot.dendro=TRUE,plot.covariat
 			}
 			plot.segments(mat=x$MatDist,thresh=height,data=x$data)
 		} else {
+			par(mfrow=c(1,1))
 			if (plot.covariate){
 				plot(x$Z)
 				points(x$data,col=group,pch=19)
