@@ -3,7 +3,7 @@ plot.SpatClust <- function(x,method=c("CH","Seg"),plot.dendro=TRUE,plot.covariat
 	w0 <- x$window
 	hh <- x$hh ## Récupération de la classification hiérarchique
 	group <- x$group ## Récupération des groupes
-	height <- getHeightCut(hh,ngr=clust$ngroup) ## Stockage de la hauteur de coupe dans l'arbre de classification
+	height <- getHeightCut(hh,ngr=x$ngroup) ## Stockage de la hauteur de coupe dans l'arbre de classification
 
 	if (method=="CH"){
 		group <- x$group
