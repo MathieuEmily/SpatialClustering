@@ -1,6 +1,6 @@
 \name{SpatialClustering}
 \alias{SpatialClustering}
-\title{Detection of clusters of point in 2-dimensional space.}
+\title{Detection of clusters of point in a 2-dimensional space.}
 \usage{
 	SpatialClustering(data,window,Homogeneous=TRUE,Z=NULL,B=500,method.cut=c("gap","tree","none"),h=NULL,k=NULL)
 }
@@ -28,7 +28,7 @@ An object of class \code{SpatClust}, i.e. a list containing the following compon
 	\item{Z}{A object of \code{\link{im}} containing the value of the covariate. NULL if not provided.}
 }
 \description{
-	\code{SpatialClustering} allows the detection of clusters of points in bi-dimensional space. A covariate can be accounted for in the clustering.
+	\code{SpatialClustering} allows the detection of clusters of points in a bi-dimensional space. A covariate can be accounted for in the clustering.
 }
 \details{
 	\code{SpatialClustering} is an implementation of the statistical procedure proposed in Bar-Hen et al. (2015). The SpatialClustering method proposes a classification of a set of bi-dimensional points given in the \code{data} object and located in the \code{window} object. Clusters are estimated by cutting a dendrogamm computed based on a dissimilarity proposed in Bar-Hen et al. (2015). The dissimilarity aims at comparing the points inter-distances to a Poisson process, that be either homogenenous (\code{Homogeneous=TRUE}) or inhomogeneous (\code{Homogeneous=FALSE}) when a covariate is accounted for. To cut the dendrogramm, two main methods are implemented: the gap statistics (\code{method="gap"} - Tibshirani, 2001) or the longest branh of the dendrogamm (\code{method="tree"}). The dendrogramm can also be cut by provided the height of cut (\code{method="none"} and \code{!is.null(h)}) of the number of desired clusters (\code{method="none"} and \code{!is.null(k)}).
