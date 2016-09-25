@@ -13,7 +13,6 @@
 \item{myPPM}{An object of class \code{\link{ppm}}. Optional}
 }
 
-(data=data,window=window,TandP=TandP,MatDist=MatDist,hh=clust$hh,group=clust$group,ngroup=clust$ngroup,Homogeneous=Homogeneous,Z=Z
 \value{
 An list with 3 objects \describe{
 	\item{Trajectories}{A list of n trajectories where a trajectory is a list of three elemets: \code{trajectory} a vector of size n with the sequence of points included in the 1-dimensional path, \code{distance} a vector of size n-1 with the sequence of interdistances between consecutive points and \code{method} the distance used in the trajectory.}
