@@ -49,3 +49,6 @@ List.Dicor.I <- generateListTandP(dDicor,w0=w0,Homogeneous=FALSE,Z=Z.Pente)
 \references{
 A. Bar-Hen, M. Emily and N. Picard. (2015) Spatial Cluster Detection Using Nearest Neighbour Distance, Spatial Statistics, Vol. 14, pages 400-411.\cr
 }
+\seealso{
+\code{\link{SpatialClustering}}, \code{\link{getClusters}}, \code{\link{getMatDist}}
+}

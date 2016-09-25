@@ -11,7 +11,7 @@
 }
 
 \value{
-An nxn matrix containing all pairwise dissimilarity between the n points of the dataset.}
+An nxn matrix containing all pairwise dissimilarity between the n points of the dataset.
 }
 \description{
 	\code{getMatDist} allows the dissimilarity matrix between the 2-dimensional points of the studied dataset.}
@@ -43,4 +43,7 @@ MatDist.Dicor.I <- getMatDist(List.Dicor.I$Probabilities,List.Dicor.I$Trajectori
 }
 \references{
 A. Bar-Hen, M. Emily and N. Picard. (2015) Spatial Cluster Detection Using Nearest Neighbour Distance, Spatial Statistics, Vol. 14, pages 400-411.\cr
+}
+\seealso{
+\code{\link{generateListTandP}}, \code{\link{getClusters}}, \code{\link{SpatialClustering}}
 }

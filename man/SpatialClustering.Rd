@@ -11,11 +11,10 @@
 \item{Z}{A object of \code{\link{im}} containing the value of the covariate}
 \item{B}{An \code{\link{integer}} that indicates the number of Monte Carlo (“bootstrap”) samples when using the gap method for estimating the number of clusters}
 \item{method.cut}{An string containing the name of the method used to estimate the number of clusters}
-\item{h}{The height used for cutting the dendrogram}
-\item{k}{The number of clusters}
+\item{h}{The height used for cutting the dendrogram. Optional}
+\item{k}{The number of clusters. Optional}
 }
 
-(data=data,window=window,TandP=TandP,MatDist=MatDist,hh=clust$hh,group=clust$group,ngroup=clust$ngroup,Homogeneous=Homogeneous,Z=Z
 \value{
 An object of class \code{SpatClust}, i.e. a list containing the following components:
 	\item{data}{A nx2 \code{\link{data.frame}}}
@@ -74,4 +73,9 @@ plot(res.I)
 }
 \references{
 A. Bar-Hen, M. Emily and N. Picard. (2015) Spatial Cluster Detection Using Nearest Neighbour Distance, Spatial Statistics, Vol. 14, pages 400-411.\cr
+R. Tibshirani, G. Walther and T. Hastie (2001) Estimating the number of data clusters via the gap statistic. J. Roy. Stat. Soc. B 63, 411–423. \cr
 }
+\seealso{
+\code{\link{generateListTandP}}, \code{\link{getClusters}}, \code{\link{getMatDist}}, \code{\link{plot.SpatClust}}
+}
+
