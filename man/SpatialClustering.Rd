@@ -2,7 +2,7 @@
 \alias{SpatialClustering}
 \title{Detection of clusters of point in 2-dimensional space.}
 \usage{
-	SpatialClustering(data,window,Homogeneous=TRUE,Z=NULL,B=500,method.cut=c("gap","tree","none"),h=NULL,k=NULL))
+	SpatialClustering(data,window,Homogeneous=TRUE,Z=NULL,B=500,method.cut=c("gap","tree","none"),h=NULL,k=NULL)
 }
 \arguments{
 \item{data}{A nx2 \code{\link{data.frame}}. Names of the column should be \code{x} and \code{y}}
