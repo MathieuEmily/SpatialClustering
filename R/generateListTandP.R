@@ -1,9 +1,6 @@
 generateListTandP <- function(data,w0=owin(c(0,250),c(0,250)),Homogeneous=TRUE,Z=NULL,myPPM=NULL){
 	npts <- nrow(data) ## number of points in the point process
 	start.points <- 1:npts
-	else {
-		npts <- length(start.points)
-	}
 	if (!Homogeneous & is.null(Z)){
 			stop("Covariate is missing for the inhomogeneous case")
 		}
