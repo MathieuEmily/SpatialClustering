@@ -1,8 +1,6 @@
-generateListTandP <- function(data,w0=owin(c(0,250),c(0,250)),Homogeneous=TRUE,Z=NULL,myPPM=NULL,start.points=NULL){
+generateListTandP <- function(data,w0=owin(c(0,250),c(0,250)),Homogeneous=TRUE,Z=NULL,myPPM=NULL){
 	npts <- nrow(data) ## number of points in the point process
-	if (is.null(start.points)){
-		start.points <- 1:npts
-	}
+	start.points <- 1:npts
 	else {
 		npts <- length(start.points)
 	}
