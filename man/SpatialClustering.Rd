@@ -64,7 +64,7 @@ plot(res,method="Seg",plot.dendro=TRUE)
 #######
 
 ## Extraction of the covariate
-Z.Pente <- data$Z.Pente
+Z.Pente <- dataExample$Z.Pente
 
 ## Estimation of the cluster
 set.seed(345)
