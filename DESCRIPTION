@@ -7,4 +7,5 @@ Maintainer: Mathieu Emily <mathieu.emily@agrocampus-ouest.fr>
 Description: The aim of this package is to propose a method for detecting clusters of points in bi-dimensional space. Our method allows to account for a covariate in the clustering. The package proposes a graphical visualization of the clusters.
 License: GPL (>= 2)
 LazyData: TRUE
-Depends: R (>= 3.3), spatstat, tripack, cluster
+Depends: R (>= 3.3)
+Imports: spatstat, tripack, cluster
