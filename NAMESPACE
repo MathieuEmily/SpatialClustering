@@ -1,4 +1,4 @@
-export(generateListTandP,getMatDist,getClusters,SpatialClustering)
+export(generateListTandP,getMatDist,getClusters,SpatialClustering,plot.SpatClust)
 
 importFrom(spatstat,owin)
 importFrom(spatstat,ppp)
