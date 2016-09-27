@@ -2,6 +2,7 @@
 
 The aim of this package is to propose a method for detecting clusters of points in bi-dimensional space. Our method allows to account for a covariate in the clustering. The package proposes a graphical visualization of the clusters.
 
+## Installation
 To install and load the package in R
 
 ```ruby
@@ -10,6 +11,7 @@ install_github("MathieuEmily/SpatialClustering")
 library(SpatialClustering)
 ```
 
+## Example
 Example of a study of tree location 
 ```ruby
 data(dataExample)
