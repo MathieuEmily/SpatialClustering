@@ -1,5 +1,7 @@
 # SpatialClustering
 
+The aim of this package is to propose a method for detecting clusters of points in bi-dimensional space. Our method allows to account for a covariate in the clustering. The package proposes a graphical visualization of the clusters.
+
 To install and load the package in R
 
 ```ruby
