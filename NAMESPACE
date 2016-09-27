@@ -1,4 +1,4 @@
-export(generateListTandP,SpatialClustering)
+export(generateListTandP,getMatDist,getClusters,SpatialClustering)
 
 importFrom(spatstat,owin)
 importFrom(spatstat,ppp)
