@@ -23,5 +23,5 @@ getTrajectory <- function(data,grid,metric="euclidean",start=-1)
 		cur <- temp[1]
 		trajectory <- c(trajectory,cur[[1]])
 	}
-	return(list(trajectory=trajectory,distance=distance,metric=metric))
+	return(list(trajectory=trajectory,distance=distance,method=metric))
 }
