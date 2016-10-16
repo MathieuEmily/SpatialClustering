@@ -1,7 +1,7 @@
-getTrajectory <- function(data,grid,method="euclidean",start=-1)
+getTrajectory <- function(data,grid,metric="euclidean",start=-1)
 {
 	npts <- length(data$x)
-	d <- as.matrix(dist(cbind(data$x,data$y),method=method))
+	d <- as.matrix(dist(cbind(data$x,data$y),method=metric))
 	if (start == -1){
 		dtmp <- rep(-1,times=npts)
 		for (i in 1:npts){

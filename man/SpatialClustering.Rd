@@ -2,15 +2,16 @@
 \alias{SpatialClustering}
 \title{Detection of clusters of point in a 2-dimensional space.}
 \usage{
-	SpatialClustering(data,window,Homogeneous=TRUE,Z=NULL,B=500,method.cut=c("gap","tree","none"),h=NULL,k=NULL)
+	SpatialClustering(data,window,metric="euclidean",Homogeneous=TRUE,Z=NULL,B=500,method.cut=c("gap","tree","none"),h=NULL,k=NULL)
 }
 \arguments{
 \item{data}{A nx2 \code{\link{data.frame}}. Names of the column should be \code{x} and \code{y}}
 \item{window}{A object of class \code{\link{owin}} that gives the window of study}
+\item{metric}{A character vector containing the name of the distance used to compute the nearest-neighbours. This must be one of "euclidean", "maximum", "manhattan", "canberra", "binary" or "minkowski" as proposed in the \code{\link{stats::dist}} function.}
 \item{Homogeneous}{A logical flag indicating whether a covariate is used to estimate clusters}
 \item{Z}{A object of \code{\link{im}} containing the value of the covariate}
 \item{B}{An \code{\link{integer}} that indicates the number of Monte Carlo (“bootstrap”) samples when using the gap method for estimating the number of clusters}
-\item{method.cut}{An string containing the name of the method used to estimate the number of clusters}
+\item{method.cut}{A character vector containing the name of the method used to estimate the number of clusters}
 \item{h}{The height used for cutting the dendrogram. Optional}
 \item{k}{The number of clusters. Optional}
 }

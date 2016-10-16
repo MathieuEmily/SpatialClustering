@@ -1,4 +1,4 @@
-generateListTandP <- function(data,w0=owin(c(0,250),c(0,250)),Homogeneous=TRUE,Z=NULL,myPPM=NULL){
+generateListTandP <- function(data,w0=owin(c(0,250),c(0,250)),metric="euclidean",Homogeneous=TRUE,Z=NULL,myPPM=NULL){
 	npts <- nrow(data) ## number of points in the point process
 	start.points <- 1:npts
 	if (!Homogeneous & is.null(Z)){
@@ -11,7 +11,7 @@ generateListTandP <- function(data,w0=owin(c(0,250),c(0,250)),Homogeneous=TRUE,Z
 	for (k in 1:length(start.points)){
 		i <- start.points[k]
 		cat("Start",k,"sur",length(start.points),": numero du point",i,"\n")
-		tmp <- getTrajectory(data,grid,start=i)
+		tmp <- getTrajectory(data,grid,start=i,metric=metric)
 		Trajectories[[k]] <- tmp
 		wtmp <- getWindow(data,tmp,w0)
 		ptmp <- getProb(data=data,window=wtmp,w0=w0,Homogeneous=Homogeneous,Z=Z,myPPM=myPPM)
